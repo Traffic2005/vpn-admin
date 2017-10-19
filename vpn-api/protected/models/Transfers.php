@@ -78,8 +78,6 @@ class Transfers extends CActiveRecord
      */
     public function search()
     {
-        // @todo Please modify the following code to remove attributes that should not be searched.
-
         $criteria = new CDbCriteria;
 
         $criteria->compare('user_id', $this->user_id, true);
@@ -103,6 +101,12 @@ class Transfers extends CActiveRecord
         return parent::model($className);
     }
 
+    /**
+     * @param $startDate
+     * @param $finishDate
+     *
+     * @return mixed
+     */
     public function getAbuseCompany($startDate, $finishDate)
     {
         return Yii::app()->db->createCommand()
@@ -117,6 +121,13 @@ class Transfers extends CActiveRecord
                              ->queryAll();
     }
 
+    /**
+     * @param $companyId
+     * @param $startDate
+     * @param $finishDate
+     *
+     * @return mixed
+     */
     public function getAbuseUser($companyId, $startDate, $finishDate)
     {
         return Yii::app()->db->createCommand()
@@ -132,7 +143,9 @@ class Transfers extends CActiveRecord
                              ->queryAll()[0];
     }
 
-
+    /**
+     * @return mixed
+     */
     public function getTransferCount()
     {
         return Yii::app()->db->createCommand()

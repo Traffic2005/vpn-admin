@@ -110,7 +110,9 @@ class User extends CActiveRecord
 		return parent::model($className);
 	}
 
-
+    /**
+     * @return mixed
+     */
 	public function getAllUsersWithCompanyName()
     {
         $data = Yii::app()->db->createCommand()

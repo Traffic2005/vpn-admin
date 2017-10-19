@@ -33,8 +33,7 @@ class Company extends CActiveRecord
 			array('name', 'length', 'max'=>128),
 			array('transferQuota', 'length', 'max'=>20),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, name, transferQuota', 'safe', 'on'=>'search'),
+			array('name, transferQuota', 'safe', 'on'=>'search'),
 		);
 	}
 
