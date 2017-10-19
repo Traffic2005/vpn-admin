@@ -3,7 +3,6 @@
 .idea
 /node_modules/
 ### Yii template
-assets/*
 !assets/.gitignore
 protected/runtime/*
 !protected/runtime/.gitignore
