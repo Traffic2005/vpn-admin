@@ -1,0 +1,12 @@
+.idea/*
+**/.idea/workspace.xml **/.idea/tasks.xml
+.idea
+/node_modules/
+### Yii template
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
+
